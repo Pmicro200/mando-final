@@ -23,3 +23,10 @@ input.onButtonPressed(Button.B, function () {
 let maqueen_andando = 0
 radio.setGroup(88)
 maqueen_andando = 0
+basic.forever(function () {
+    if (maqueen_andando == 1) {
+        radio.sendNumber(1)
+    } else {
+        radio.sendNumber(0)
+    }
+})
