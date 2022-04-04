@@ -1,6 +1,6 @@
 input.onButtonPressed(Button.A, function () {
     maqueen_andando = 1
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
+    radio.sendNumber(1)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -11,7 +11,7 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.B, function () {
     maqueen_andando = 0
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 0)
+    radio.sendNumber(0)
     basic.showLeds(`
         # . . . #
         . # . # .
