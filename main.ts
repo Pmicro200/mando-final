@@ -1,3 +1,14 @@
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 20) {
+        basic.showLeds(`
+            # . . . #
+            . # . # .
+            . . # . .
+            . # . # .
+            # . . . #
+            `)
+    }
+})
 input.onButtonPressed(Button.A, function () {
     maqueen_andando = 1
     radio.sendNumber(1)
